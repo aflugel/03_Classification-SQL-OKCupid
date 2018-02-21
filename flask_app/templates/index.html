@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Are you a sports fan?</title>
+  <style>
+  body{
+    font-family: sans-serif;
+  }
+  .button {
+    background-color: Purple;
+    border: none;
+    color: White;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  .animal-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 10px 10px 0px #eee;
+    width: 300px;
+    margin: auto;
+  }
+  </style>
+
+</head>
+
+<body align="center">
+
+  <h2>Answer the questions and I'll tell you if you're a sports fan.</h2>
+
+  <form action="/predict_sportfan/" method="post">
+
+    <div class="animal-card" align="center">
+        Would you date someone just for the sex?
+    <br>
+        <select name="q17">
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select>
+        <br>
+        <br>
+    Does the idea of flipping a coin to make important life decisions appeal to you?
+    <br>
+        <select name="q55">
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select>
+        <br>
+        <br>
+    Are you attracted to dangerous situations?
+    <br>
+        <select name="q56">
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select>
+        <br>
+        <br>
+    Do you like to argue?
+    <br>
+        <select name="q57">
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select>
+        <br>
+        <br>
+    Do you have a problem with racist jokes?
+    <br>
+        <select name="q65">
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select>
+        <br>
+        <br>
+    Do you think homosexuality is a sin?
+    <br>
+        <select name="q70">
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select>
+        <br>
+        <br>
+    Is interracial marriage a bad idea?
+    <br>
+        <select name="q71">
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select>
+        <br>
+        <br>
+    Is smoking disgusting?
+    <br>
+        <select name="q87">
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select>
+        <br>
+        <br>
+    Do you have a child or children?
+    <br>
+        <select name="q105">
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select>
+        <br>
+        <br>
+    Is it okay to live with someone you're dating, even before you're engaged or married?
+    <br>
+        <select name="q114">
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select>
+        <br>
+        <br>
+    Would you strongly prefer to go out with someone of your own skin color / racial background?
+    <br>
+        <select name="q123">
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select>
+        <br>
+        <br>
+    Do you think women have an obligation to keep their legs shaved?
+    <br>
+        <select name="q134">
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select>
+        <br>
+        <br>
+    Would you get upset if your girlfriend/boyfriend flirted in front of you?
+    <br>
+        <select name="q136">
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select>
+        <br>
+        <br>
+    Should burning your country's flag be illegal?
+    <br>
+        <select name="q175">
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select>
+        <br>
+        <br>
+    Do you believe in God?
+    <br>
+        <select name="q210">
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select>
+        <br>
+        <br>
+    Gay marraige: should it be legal?
+    <br>
+        <select name="q219">
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select>
+        <br>
+        <br>
+    Are you annoyed by people who are super logical?
+    <br>
+        <select name="q301">
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select>
+        <br>
+        <br>
+    If you like someone a lot, do you usually ask them out?
+    <br>
+        <select name="q308">
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select>
+        <br>
+        <br>
+    Would you consider having an open relationship (i.e., one where you can see other people)?
+    <br>
+        <select name="q325">
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select>
+        <br>
+        <br>
+    Regardless of whether or not you smoke marijuana, do you think it should be legalized for adults?
+    <br>
+        <select name="q341">
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select>
+        <br>
+        <br>
+    Is there a such thing as having had too many sex partners?
+    <br>
+        <select name="q393">
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select>
+        <br>
+        <br>
+    Do you enjoy discussing politics?
+    <br>
+        <select name="q403">
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select>
+        <br>
+        <br>
+    Have you smoked a cigarette in the last 6 months?
+    <br>
+        <select name="q501">
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select>
+        <br>
+        <br>
+    Is marriage a necessity for two people who love each other?
+    <br>
+        <select name="q527">
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select>
+        <br>
+        <br>
+    Do spelling mistakes annoy you?
+    <br>
+        <select name="q553">
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select>
+        <br>
+        <br>
+    Would you be okay with your significant other spending a lot of time with one of his/her exes (as a friend)?
+    <br>
+        <select name="q784">
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select>
+        <br>
+        <br>
+    For you personally, is abortion an option in case of an accidental pregnancy?
+    <br>
+        <select name="q838">
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select>
+        <br>
+        <br>
+    Do you like the taste of beer?
+    <br>
+        <select name="q1112">
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select>
+        <br>
+        <br>
+    Does your partner have to be an active reader?
+    <br>
+        <select name="q1119">
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select>
+        <br>
+        <br>
+    Is jealousy healthy in a relationship?
+    <br>
+        <select name="q1440">
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select>
+        <br>
+        <br>
+    Do you enjoy outdoor activities such as camping, hiking or fishing?
+    <br>
+        <select name="q1454">
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select>
+        <br>
+        <br>
+    Would you consider sleeping with someone on the first date?
+    <br>
+        <select name="q1597">
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select>
+        <br>
+        <br>
+    Could you date someone who already has children from a previous relationship?
+    <br>
+        <select name="q1815">
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select>
+        <br>
+        <br>
+    Are you happy with your life?
+    <br>
+        <select name="q4018">
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select>
+        <br>
+        <br>
+    Would you date someone who still lives with his/her parents?
+    <br>
+        <select name="q5417">
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select>
+        <br>
+        <br>
+    Would you date someone who is bisexual?
+    <br>
+        <select name="q6258">
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select>
+        <br>
+        <br>
+    Would you enjoy a night in playing video games?
+    <br>
+        <select name="q6867">
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select>
+        <br>
+        <br>
+    Have you ever been in love?
+    <br>
+        <select name="q8054">
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select>
+        <br>
+        <br>
+    Would you need to sleep with someone before you considered marrying them?
+    <br>
+        <select name="q12964">
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select>
+        <br>
+        <br>
+    Would you join a dating site just so you could find people to have sex with?
+    <br>
+        <select name="q14913">
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select>
+        <br>
+        <br>
+    Could you date someone with no long-term goals?
+    <br>
+        <select name="q15280">
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select>
+        <br>
+        <br>
+    Are you careful with your money?
+    <br>
+        <select name="q16713">
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select>
+        <br>
+        <br>
+    Would you date someone who doesn't own a car?
+    <br>
+        <select name="q19075">
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select>
+        <br>
+        <br>
+    Do you keep a budget (of your finances)?
+    <br>
+        <select name="q20418">
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select>
+        <br>
+        <br>
+    When chatting with a potential friend/significant other online, is use of proper grammar and spelling important to you?
+    <br>
+        <select name="q20530">
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select>
+        <br>
+        <br>
+    Do you often make jokes that offend more uptight people?
+    <br>
+        <select name="q23834">
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select>
+        <br>
+        <br>
+    Do you believe contraception is morally wrong?
+    <br>
+        <select name="q24125">
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select>
+        <br>
+        <br>
+    Do you think drug use with your partner can be a romantic activity?
+    <br>
+        <select name="q25228">
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select>
+        <br>
+        <br>
+    Do you often find yourself worrying about things that you have no control over?
+    <br>
+        <select name="q27477">
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select>
+        <br>
+        <br>
+    Do you like scary movies?
+    <br>
+        <select name="q44639">
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select>
+        <br>
+        <br>
+    Do you believe in the power of prayer?
+    <br>
+        <select name="q48372">
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select>
+        <br>
+        <br>
+    Is astrological sign at all important in a match?
+    <br>
+        <select name="q60100">
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select>
+        <br>
+        <br>
+    Do you believe that regular sex is necessary in maintaining a healthy relationship?
+    <br>
+        <select name="q60852">
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select>
+        <br>
+        <br>
+    Would you consider dating someone whose religion or spirituality is the primary focus in their life?
+    <br>
+        <select name="q61786">
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select>
+        <br>
+        <br>
+    Are you looking for a partner to have children with?
+    <br>
+        <select name="q80041">
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select>
+        <br>
+        <br>
+    Are you Christian?
+    <br>
+        <select name="q156913">
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select>
+        <br>
+        <br>
+    Are you Jewish?
+    <br>
+        <select name="q156914">
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select>
+        <br>
+        <br>
+    Are you either vegetarian or vegan?
+    <br>
+        <select name="q179268">
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select>
+        <br>
+        <br>
+    Were you picked on a lot in school?
+    <br>
+        <select name="q313640">
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select>
+        <br>
+        <br>
+    Could you date someone who was really quiet?
+    <br>
+        <select name="q358014">
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select>
+        <br>
+        <br>
+    Could you date someone who was really messy?
+    <br>
+        <select name="q358077">
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select>
+        <br>
+        <br>
+    Do you enjoy intense intellectual conversations?
+    <br>
+        <select name="q358084">
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select>
+        <br>
+        <br>
+    Are you an aspiring actor/artist/writer or other creative type?
+    <br>
+        <select name="q158">
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select>
+        <br>
+        <br>
+    Is art important to you?
+    <br>
+        <select name="q1766">
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select>
+        <br>
+        <br>
+    Do superficial people, who place a high emphasis on physical appearance, annoy you?
+    <br>
+        <select name="q18594">
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select>
+        <br>
+        <br>
+    Do you believe that men should be the heads of their households?
+    <br>
+        <select name="q27164">
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select>
+        <br>
+        <br>
+    Do you believe a couple should live together before considering marriage?
+    <br>
+        <select name="q34094">
+                <option value="yes">yes</option>
+                <option value="no">no</option>
+            </select>
+        <br>
+        <br>
+
+
+​
+    </div>
+
+  <br>
+
+  <button type="submit" class="button">
+    Am I a sports fan?
+  </button>
+  </form>
+
+  <br>
+
+  {% if message %}
+  <h2>{{message}}</h2>
+  {% endif %}
+
+</body>
+</html>
